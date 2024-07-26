@@ -1,13 +1,21 @@
-#########
-#importar dependencias
-#########
-#########
-#Crear una funcion que muestre un mensaje si el dato de la entrada es igual a 5. si el dato no es 5 debe arrojar un mensaje de error
-#########
-#########
-#Crear interfaz en la cual se va a mostrar todo con una resolucion de 300x400
-#########
-#########
-#añadir elementos necesarios
-#########
+import tkinter as tk 
+from tkinter import messagebox, ttk
+
+def mostrarmensaje():
+    numero = entry.get()
+    if numero == "5":
+        messagebox.showinfo("test", "prueba aprobada")
+    else:
+        messagebox.showerror("test", "dato no coincide")
+
+root = tk.Tk()
+root.title("Prueba tecnica")
+root.geometry("400x300")
+
+etiqueta = tk.Label(root, text="ingrese un numero")
+etiqueta.pack(pady = 5)
+entry = tk.Entry(root)
+entry.pack(pady = 5)
+boton = tk.Button(root, text="ejecutar", command=mostrarmensaje)
+boton.pack(pady = 5)
 root.mainloop()
